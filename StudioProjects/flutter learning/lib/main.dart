@@ -2144,24 +2144,227 @@ library;
 //   }
 // }
 
+/**&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&  L=78 WIDGETS MAPING BY A LIST MAP &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
+
+// import 'package:flutter/material.dart';
+
+// void main() {
+//   runApp(MyApp());
+// }
+
+// class MyApp extends StatelessWidget {
+//   var arrData = [
+//     'kapil',
+//     'varun',
+//     'atul',
+//     'MA',
+//     'ayaz',
+//     'ayan',
+//     'gauhar',
+//   ];
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       home: Scaffold(
+//           appBar: AppBar(
+//             title: Text('Map List'),
+//           ),
+//           body: Container(
+//             child: ListView(
+//                 children: arrData.map((value) {
+//               return Container(
+//                 child: Text(value),
+//               );
+//             }).toList()),
+//           )),
+//     );
+//   }
+// }
+
 /**&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&  L=75 LIST WHEELSCROLL VIEW (3D) &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
 
-import 'package:flutter/material.dart';
+// import 'package:flutter/material.dart';
 
-void main() {
-  runApp(MyApp());
-}
+// void main() {
+//   runApp(MyApp());
+// }
 
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('3D LIST SCROLL'),
-        ),
-        body: Text('hello world text'),
-      ),
-    );
-  }
-}
+// class MyApp extends StatelessWidget {
+//   var arrData = [
+//     'kapil',
+//     'varun',
+//     'atul',
+//     'MA',
+//     'ayaz',
+//     'ayan',
+//     'gauhar',
+//   ];
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       home: Scaffold(
+//           appBar: AppBar(
+//             title: Text('LISTWHEEL SCROLL VIEW'),
+//           ),
+//           body: Container(
+//             child: ListWheelScrollView(
+//                 itemExtent: 100, // height of item take
+//                 children: arrData.map((value) {
+//                   return Container(
+//                     width: double.infinity,
+//                     color: Colors.blue,
+//                     child: Text(value),
+//                   );
+//                 }).toList()),
+//           )),
+//     );
+//   }
+// }
+
+/**&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&  L=79 TWEEN ANIMATION &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
+
+// import 'package:flutter/material.dart';
+
+// void main() {
+//   runApp(MyApp());
+// }
+
+// class MyApp extends StatefulWidget {
+//   @override
+//   State<MyApp> createState() => _MyAppState();
+// }
+
+// class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
+//   late Animation animation;
+
+//   late AnimationController animationController;
+//   @override
+//   void initState() {
+//     super.initState();
+//     animationController =
+//         AnimationController(vsync: this, duration: Duration(seconds: 2));
+//     animation = Tween(begin: 0.0, end: 200.0).animate(animationController);
+//     animationController.addListener(() {
+//       print(animation.value);
+//       setState(() {});
+//     });
+//     animationController.forward();
+//   }
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       home: Scaffold(
+//           appBar: AppBar(
+//             title: Text('TWEEN ANIMATION'),
+//           ),
+//           body: Center(
+//             child: Container(
+//               height: animation.value,
+//               width: animation.value,
+//               color: Colors.blue,
+//             ),
+//           )),
+//     );
+//   }
+// }
+
+/**&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& L=80 RIPPLE  ANIMATION &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
+// import 'package:flutter/material.dart';
+
+// void main() {
+//   runApp(MyApp());
+// }
+
+// class MyApp extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       home: Scaffold(
+//         appBar: AppBar(
+//           title: Text('Ripple Animation'),
+//         ),
+//         body: Center(
+//           child: RippleButton(), // Use the RippleButton widget
+//         ),
+//       ),
+//     );
+//   }
+// }
+
+// class RippleButton extends StatefulWidget {
+//   @override
+//   _RippleButtonState createState() => _RippleButtonState();
+// }
+
+// class _RippleButtonState extends State<RippleButton>
+//     with SingleTickerProviderStateMixin {
+//   late AnimationController _controller;
+//   late Animation<double> _animation;
+
+//   @override
+//   void initState() {
+//     super.initState();
+//     _controller = AnimationController(
+//       vsync: this,
+//       duration: Duration(milliseconds: 600),
+//     );
+
+//     _animation = Tween<double>(begin: 0.0, end: 1.0).animate(_controller);
+//   }
+
+//   void _startAnimation() {
+//     _controller.forward().then((_) {
+//       _controller.reverse(); // Reverse the animation after it completes
+//     });
+//   }
+
+//   // @override
+//   // void dispose() {
+//   //   _controller.dispose();
+//   //   super.dispose();
+//   // }
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return GestureDetector(
+//       onTap: _startAnimation, // Start the animation on tap
+//       child: Stack(
+//         alignment: Alignment.center,
+//         children: [
+//           AnimatedBuilder(
+//             animation: _animation,
+//             builder: (context, child) {
+//               return Container(
+//                 width: 100 + (200 * _animation.value), // Expand width
+//                 height: 100 + (200 * _animation.value), // Expand height
+//                 decoration: BoxDecoration(
+//                   shape: BoxShape.circle,
+//                   color: Colors.blue
+//                       .withOpacity(1.0 - _animation.value), // Fade out effect
+//                 ),
+//               );
+//             },
+//           ),
+//           Container(
+//             width: 100, // Base button size
+//             height: 100,
+//             decoration: BoxDecoration(
+//               shape: BoxShape.circle,
+//               color: Colors.blue, // Base button color
+//             ),
+//             child: Center(
+//               child: Text(
+//                 'Tap',
+//                 style: TextStyle(color: Colors.white),
+//               ),
+//             ),
+//           ),
+//         ],
+//       ),
+//     );
+//   }
+// }
+
+
+/**&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&  */
