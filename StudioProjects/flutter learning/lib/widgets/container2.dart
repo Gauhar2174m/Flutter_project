@@ -13,8 +13,8 @@ class container2 extends StatelessWidget {
       child: Container(
         color: Colors.orange,
         child: ListView.builder(
-          itemBuilder: (context, index) => Padding(
-            padding: const EdgeInsets.all(8.0),
+          itemBuilder: (context, index) => const Padding(
+            padding: EdgeInsets.all(8.0),
             child: ListTile(
               leading: CircleAvatar(
                 backgroundColor: Colors.greenAccent,

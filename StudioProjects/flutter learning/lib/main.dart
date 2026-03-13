@@ -1,4 +1,5 @@
-/**&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&  flutter container and Center &&&&&&&&&&&&&&&&&&*/
+/// &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&  flutter container and Center &&&&&&&&&&&&&&&&&&
+// library;
 // import 'package:flutter/material.dart';
 
 // void main() {
@@ -27,40 +28,43 @@
 //   }
 // }
 
-/**&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& L=30 Center Widget  &&&&&&&&&&&&&&&&&&*/
+/// &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& L=30 Center Widget  &&&&&&&&&&&&&&&&&&
+library;
 
-// import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 
-// void main() {
-//   runApp(MyApp());
-// }
+void main() {
+  runApp(MyApp());
+}
 
-// class MyApp extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//       home: Scaffold(
-//         appBar: AppBar(
-//           title: Text('Hello flutter '),
-//         ),
-//         body: Center(
-//           child: Container(
-//               width: 100,
-//               height: 100,
-//               color: Colors.blue,
-//               child: Center(
-//                 child: Text(
-//                   'hello Gauhar',
-//                   style: TextStyle(fontSize: 20),
-//                 ), // text in center
-//               )
-//               // Change this color as per your requirement
-//               ),
-//         ),
-//       ),
-//     );
-//   }
-// }
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text('Hello flutter '),
+        ),
+        body: Center(
+          child: Container(
+              width: 100,
+              height: 100,
+              color: Colors.blue,
+              child: const Center(
+                child: Text(
+                  'hello Gauhar',
+                  style: TextStyle(fontSize: 20),
+                ), // text in center
+              )
+              // Change this color as per your requirement
+              ),
+        ),
+      ),
+    );
+  }
+}
 
 /**&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& L=31 Text Widget and its Styles  &&&&&&&&&&&&&&&&&&*/
 
@@ -753,7 +757,7 @@
 // }
 
 /// &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& L=47 CARD WIDGET &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
-library;
+// library;
 
 // import 'package:flutter/material.dart';
 
@@ -2366,5 +2370,51 @@ library;
 //   }
 // }
 
-
 /**&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&  */
+// import 'package:flutter/material.dart';
+
+// void main() {
+//   runApp(MyApp());
+// }
+
+// class MyApp extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       home: Scaffold(
+//         appBar: AppBar(
+//           title: Text('flutter container'),
+//         ),
+//         body: Center(
+//           child: Container(
+//             width: 100,
+//             height: 100,
+//             color: Colors.blue,
+//             child:Center(child: Text('hello Gauhar'),)
+//              // Change this color as per your requirement
+//           ),
+//         ),
+//       ),
+//     );
+//   }
+// }
+
+// import 'package:flutter/material.dart';
+
+// void main() {
+//   runApp(MyApp());
+// }
+
+// class MyApp extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       home: Scaffold(
+//         appBar: AppBar(),
+//         body: Container(
+//           child: Text('hello'),
+//         ),
+//       ),
+//     );
+//   }
+// }

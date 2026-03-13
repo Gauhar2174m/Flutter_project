@@ -89,7 +89,7 @@ class OtpScreen extends StatelessWidget {
             Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => Profilescreen(),
+                  builder: (context) => const Profilescreen(),
                 ));
           },
           Buttonname: "Next",

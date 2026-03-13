@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:whatsapp_ui_clon_app/TabScreens/Camerascreen.dart';
+import 'package:whatsapp_ui_clon_app/TabScreens/callscreen.dart';
+import 'package:whatsapp_ui_clon_app/TabScreens/chatscreen.dart';
+import 'package:whatsapp_ui_clon_app/TabScreens/statusscreen.dart';
 import 'package:whatsapp_ui_clon_app/widgets/UIhelper.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -10,27 +14,32 @@ class HomeScreen extends StatelessWidget {
       length: 4,
       child: Scaffold(
         appBar: AppBar(
-          bottom: TabBar(tabs: [
-            Tab(
-              icon: Icon(Icons.camera_alt),
-            ),
-            Tab(
-              text: "CHATS",
-            ),
-            Tab(
-              text: "STATUS",
-            ),
-            Tab(
-              text: "CALLS",
-            )
-          ]),
-          toolbarHeight: 100,
+          bottom: TabBar(
+            tabs: [
+              Tab(
+                icon: Icon(Icons.camera_alt),
+              ),
+              Tab(
+                text: "CHATS",
+              ),
+              Tab(
+                text: "STATUS",
+              ),
+              Tab(
+                text: "CALLS",
+              )
+            ],
+            indicatorColor: Colors.white,
+            labelColor: Colors.white,
+          ),
+          toolbarHeight: 80,
           title: UiHelper.CustomText(
               text: "WhatsApp",
               height: 24,
               color: Colors.white,
               fontweight: FontWeight.bold),
           backgroundColor: Color(0XFF00A884),
+          automaticallyImplyLeading: false,
           actions: [
             Padding(
               padding: const EdgeInsets.only(right: 20),
@@ -43,9 +52,12 @@ class HomeScreen extends StatelessWidget {
             //     icon: Image.asset('assets/images/camera-solid 2.png'))
           ],
         ),
-        body: Center(
-          child: Text('hello'),
-        ),
+        body: TabBarView(children: [
+          const CameraScreen(),
+          ChatsScreen(),
+          StatusScreen(),
+          CallScreen(),
+        ]),
       ),
     );
   }

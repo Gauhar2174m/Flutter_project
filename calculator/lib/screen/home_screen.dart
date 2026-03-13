@@ -84,7 +84,7 @@ class HomeScreen extends StatelessWidget {
                       SizedBox(
                         width: 21,
                       ),
-                      calculateButton()
+                      const calculateButton()
                     ],
                   )
                 ],

@@ -15,8 +15,8 @@ class container1 extends StatelessWidget {
         child: ListView.builder(
           itemCount: 10,
           scrollDirection: Axis.horizontal,
-          itemBuilder: (context, index) => Padding(
-            padding: const EdgeInsets.all(11),
+          itemBuilder: (context, index) => const Padding(
+            padding: EdgeInsets.all(11),
             child: SizedBox(
               width: 100,
               child: CircleAvatar(

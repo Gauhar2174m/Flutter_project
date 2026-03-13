@@ -14,7 +14,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     // Start the timer for 2 seconds
-    Timer(Duration(seconds: 2), () {
+    Timer(const Duration(seconds: 2), () {
       // Navigate to the HomePage after the timer completes
       Navigator.pushReplacement(
         context,
@@ -28,7 +28,7 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       body: Container(
         color: Colors.blue,
-        child: Center(
+        child: const Center(
           child: Text(
             'Hello',
             style: TextStyle(
